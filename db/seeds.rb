@@ -4,10 +4,12 @@ require 'json'
 require 'open-uri'
 puts 'Cleaning ingredients database'
 Ingredient.destroy_all
-doc = "https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list".read
+url = "https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list"
+serialized_ingredients = open(url).read
+ingredients = JSON.parse(serialized_ingredients)
 
-doc['drinks'].each do |ingredient|
+ingredients['drinks'].each do |ingredient|
   Ingredient.create!(name: ingredient['strIngredient1'])
-  puts
+  puts "Added #{ingredient['strIngredient1']} ingredient"
 end
 puts 'Seeded db'
