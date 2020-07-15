@@ -1,13 +1,13 @@
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-require 'faker'
+require 'json'
+require 'open-uri'
 puts 'Cleaning ingredients database'
 Ingredient.destroy_all
-10.times do
-  new_ingredient = Ingredient.new(
-    name: Faker::Beer.brand
-  )
-  new_ingredient.save
-  puts "Ingredient #{new_ingredient.id} created"
+doc = "https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list".read
+
+doc['drinks'].each do |ingredient|
+  Ingredient.create!(name: ingredient['strIngredient1'])
+  puts
 end
 puts 'Seeded db'
