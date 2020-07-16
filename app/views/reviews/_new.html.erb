@@ -1,0 +1,6 @@
+<h5>Add a new review</h5>
+<%= simple_form_for [@cocktail, review] do |f| %>
+  <%= f.input :content %>
+  <%= f.input :rating, collection: 1..5 %>
+  <%= f.submit class: "btn btn-primary" %>
+<% end %>
