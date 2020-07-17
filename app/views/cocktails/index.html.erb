@@ -6,7 +6,7 @@
   <div class="mt-4 cocktails_container">
     <% @cocktails.each do |cocktail| %>
       <div class="card" style="width: 350px;">
-        <img class="card-img-top" src="https://source.unsplash.com/350x350/?cocktail">
+        <%= cl_image_tag cocktail.photo.key, height: 350, width: 350, crop: :fill %>
         <div class="card-body">
           <h5 class="card-title"><%= cocktail.name %></h5>
           <%= link_to "Preparation", cocktail_path(cocktail.id), class: "btn btn-primary" %>
@@ -15,7 +15,6 @@
     <% end %>
   </div>
 </div>
-
 
 <!--
 https://source.unsplash.com/MxfcoxycH_Y/1600x900
