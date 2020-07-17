@@ -32,9 +32,9 @@ gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'mast
 gem 'autoprefixer-rails'
 gem 'font-awesome-sass', '~> 5.12.0'
 gem 'simple_form'
-# Cloudinary password protector
+# Cloudinary and password protector
 gem 'dotenv-rails', groups: [:development, :test]
-
+gem 'cloudinary', '~> 1.12.0'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
