@@ -32,6 +32,8 @@ gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'mast
 gem 'autoprefixer-rails'
 gem 'font-awesome-sass', '~> 5.12.0'
 gem 'simple_form'
+# Cloudinary password protector
+gem 'dotenv-rails', groups: [:development, :test]
 
 
 group :development, :test do
