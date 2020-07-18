@@ -1,0 +1,13 @@
+.container-cocktails {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 16px;
+  grid-row-gap: 16px;
+}
+
+.container-pos-rel {
+  position: relative;
+  background-color: #fff;
+  bottom: 75px;
+}
+

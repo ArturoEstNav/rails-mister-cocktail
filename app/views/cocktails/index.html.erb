@@ -1,22 +1,22 @@
 <%= render "navbar" %>
+<div class="banner">
 <%= cl_image_tag "f7w838y7q9iawkh9k383", width: 400, height: 300, crop: :fill%>
+
+</div>
 <div class="container p-5">
-  <%= link_to "Add cocktail",  new_cocktail_path %>
-  <br>
-  <div class="mt-4 cocktails_container">
-    <% @cocktails.each do |cocktail| %>
-      <div class="card" style="width: 350px;">
-        <%= cl_image_tag cocktail.photo.key, height: 350, width: 350, crop: :fill %>
-        <div class="card-body">
-          <h5 class="card-title"><%= cocktail.name %></h5>
-          <%= link_to "Preparation", cocktail_path(cocktail.id), class: "btn btn-primary" %>
+  <div class="container-pos-rel">
+    <%= link_to "Add cocktail",  new_cocktail_path %>
+    <br>
+    <div class="mt-4 cocktails_container">
+      <% @cocktails.each do |cocktail| %>
+        <div class="card shadow" style="width: 350px;">
+          <%= cl_image_tag cocktail.photo.key, height: 350, width: 350, crop: :fill %>
+          <div class="card-body ">
+            <h5 class="card-title"><%= cocktail.name %></h5>
+            <%= link_to "Preparation", cocktail_path(cocktail.id), class: "btn btn-primary" %>
+          </div>
         </div>
-      </div>
-    <% end %>
+      <% end %>
+    </div>
   </div>
 </div>
-
-<!--
-https://source.unsplash.com/MxfcoxycH_Y/1600x900
-
- -->

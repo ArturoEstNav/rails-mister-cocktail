@@ -1,23 +1,23 @@
 .navbar-lewagon {
-  justify-content: space-between;
-  background-color: #F4F1BB;
+  // justify-content: space-between;
+  background-color: #759FBC;
 
 }
 
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
-}
+// .navbar-lewagon .navbar-collapse {
+//   flex-grow: 0;
+// }
 
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
-}
+// .navbar-lewagon .navbar-brand img {
+//   width: 40px;
+// }
 
 .navbar-link {
-  color: inherit;
+  color: #fff;
   text-decoration: none;
   .navbar-link:hover {
     text-decoration: none;
-    color: inherit;
+    color: #fff;
   }
 }
 

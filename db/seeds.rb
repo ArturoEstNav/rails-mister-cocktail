@@ -4,6 +4,8 @@ require 'json'
 require 'open-uri'
 puts 'Cleaning ingredients database'
 Ingredient.destroy_all
+puts 'Cleaning cocktails database'
+Cocktail.destroy_all
 url = "https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list"
 serialized_ingredients = open(url).read
 ingredients = JSON.parse(serialized_ingredients)
